@@ -1,0 +1,53 @@
+.subHeaderContainer {
+  width: 100%;
+  height: 10rem;
+  background-color: #fff;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  overflow-x: scroll;
+}
+.subHeaderContainer::-webkit-scrollbar {
+  /* display: inline-block;
+  width: 2em;
+  height: 0.6rem;
+  background: transparent;
+  border-radius: 1rem; */
+  display: none;
+}
+.subHeaderContainer::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+
+  background-color: #303c54;
+}
+.subHeaderContainer::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-left: 2rem;
+}
+.subHeaderContainer::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-right: 2rem;
+}
+.subHeaderContainer div {
+  display: flex;
+  gap: 2rem;
+}
+
+.menuBtn {
+  padding: 0.5rem 2rem;
+  width: fit-content;
+  border: 1px solid #bebebe;
+  outline: none;
+  background-color: #fff;
+
+  color: #222;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 1rem;
+}
+.btnActive {
+  background-color: #01896a;
+  color: #fff;
+  border: none;
+}

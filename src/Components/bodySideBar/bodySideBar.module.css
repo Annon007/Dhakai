@@ -1,0 +1,27 @@
+.sideBarContainer {
+  width: 10rem;
+  height: 100%;
+  background-color: #fff;
+  padding: 1rem 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+.logo {
+  width: 100%;
+  height: 4rem;
+  object-fit: contain;
+  margin-bottom: 3rem;
+}
+.sideBarTop,
+.sideBarBottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  justify-items: center;
+  /* align-content: end; */
+}
+.sideBarBottom {
+  align-self: start;
+  padding-bottom: 1rem;
+}

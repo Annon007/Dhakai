@@ -1,0 +1,28 @@
+.icon {
+  /* display: block; */
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke: #01896a;
+  fill: #01896a;
+}
+.searchIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke: #a0a0a0;
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.msgIcon {
+  width: 5rem;
+  height: 5rem;
+  fill: #fff;
+  stroke: #007157;
+}
+.userIcon {
+  width: 5rem;
+  height: 5rem;
+  fill: #fff;
+  stroke: #007157;
+}

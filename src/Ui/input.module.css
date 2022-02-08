@@ -1,0 +1,15 @@
+.input input {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 3rem;
+  position: relative;
+  padding: 1.5rem 1.5rem 1.5rem 5rem;
+  font-size: 1.8rem;
+  /* font-weight: 600; */
+}
+.input {
+  position: relative;
+}

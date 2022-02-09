@@ -2,18 +2,18 @@ import React from "react";
 import styles from "./login.module.css";
 import Modal from "../../Ui/Modal";
 // import { getLogin } from "../../Api/login";
-const getLogin = async (data, key) => {
+const getLogin = async (data) => {
     try {
         const sendReq = fetch("https://devapi.dhakai.com/api/v2/login-buyer", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                "Authorization": key,
+                
             }, body: JSON.stringify(data)
         })
         const res = await sendReq;
-
-        console.log(res)
+        const resData=await res.json();
+        console.log(resData)
     } catch (err) {
 
     }
@@ -33,8 +33,15 @@ const Login = () => {
         const formSubmit = new FormData(e.target);
         const data = Object.fromEntries(formSubmit);
         const apikey = await getApiKey();
+        const formData={
+            "auth":{
+                "email":data.email,
+                "deviceUuid":`${apikey}`
+            },
+            "password":data.password
+        }
         console.log(apikey)
-        getLogin(data, apikey);
+        getLogin(formData, apikey);
         // console.log({...data,});
         // const convert = uuidAPIKey.toAPIKey(`${apikey}`);
         // console.log(convert, "API KEY")

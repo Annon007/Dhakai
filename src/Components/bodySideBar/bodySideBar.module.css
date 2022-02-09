@@ -8,13 +8,13 @@
   align-items: start;
 }
 .logo {
-  width: 100%;
+  width: 4rem;
   height: 4rem;
   object-fit: contain;
   margin-bottom: 3rem;
+  cursor: pointer;
 }
-.sideBarTop,
-.sideBarBottom {
+.sideBarTop {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -22,6 +22,11 @@
   /* align-content: end; */
 }
 .sideBarBottom {
-  align-self: start;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+  justify-items: center;
+
   padding-bottom: 1rem;
 }

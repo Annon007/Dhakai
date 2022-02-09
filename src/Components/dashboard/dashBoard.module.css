@@ -13,6 +13,7 @@
   grid-gap: 2rem;
   gap: 2rem;
   align-items: start;
+  position: relative;
 }
 .cards::-webkit-scrollbar {
   display: inline-block;

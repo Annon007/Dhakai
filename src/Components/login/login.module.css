@@ -1,0 +1,47 @@
+.forms{
+    padding: 1rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    position: relative;
+}
+.formCont{
+    width: 50rem;
+    height:50rem ;
+}
+.forms label{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.forms input{
+    height: 5rem;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    background-color: #d8d8d8;
+}
+.forms button{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    justify-self: center;
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 1rem 3rem;
+    background-color: #139372;
+    border-radius: 1rem;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+.forms button:hover{
+    background-color: #0e634e;
+}
+.resMsg{
+    justify-self:center;
+    color: tomato;
+    font-size: 3rem;
+    font-weight: 600;
+}

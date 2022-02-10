@@ -4,6 +4,11 @@
   background-color: #fff;
   border-radius: 1rem;
   padding: 2rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+.cardContainer:hover{
+  box-shadow: 2px 2px 20px rgb(0 0 0 / 10%);
 }
 .cardHedaderImages {
   width: 100%;

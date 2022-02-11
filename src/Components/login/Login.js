@@ -2,41 +2,9 @@ import React, { useState } from "react";
 import styles from "./login.module.css";
 import Modal from "../../Ui/Modal";
 import Loading from "../../Ui/Loading";
-// import { getLogin } from "../../Api/login";
-const getLogin = async (data) => {
-    try {
-        const sendReq = fetch("https://devapi.dhakai.com/api/v2/login-buyer", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
+import { getLogin, getApiKey } from "../../Api/loginAPI";
 
-            }, body: JSON.stringify(data)
-        })
-        const res = await sendReq;
-        if (!res.ok) return;
 
-        const resData = await res.json();
-        return {
-            msg: resData.message,
-            status: resData.statusCode,
-            result: resData.result
-        };
-    } catch (err) {
-        const errMsg = await err.message;
-        return {
-            msg: errMsg
-        };
-    }
-};
-const getApiKey = async () => {
-    try {
-        const sendAPIreq = fetch("https://devapi.dhakai.com/api/v2/deviceuid");
-        const res = await sendAPIreq;
-        const response = await res.json();
-        return response.result.deviceUuid;
-    } catch (err) { }
-
-}
 const Login = props => {
     const [errMsg, setErrMsg] = useState();
     const [isLoading, setIsLoading] = useState(false)
@@ -67,22 +35,16 @@ const Login = props => {
             setIsLoading(false);
 
         }
-        // console.log({...data,});
-        // const convert = uuidAPIKey.toAPIKey(`${apikey}`);
-        // console.log(convert, "API KEY")
-        // getLogin(data);
     }
     return <Modal>
-        {/* defaultValue="dev.dhakai.us@gmail.com" 
-        defaultValue="h3nn2%!7jw"*/}
         <div className={isLoading ? styles.formCont : ""}>
 
             {isLoading && <Loading />}
             {!isLoading && <form onSubmit={handleFormSubmit} className={styles.forms}>
                 <label>Email</label>
-                <input type="email" name="email" required />
+                <input type="email" name="email" defaultValue="rajib2@gmail.com" required />
                 <label>Password</label>
-                <input type="password" name="password" required />
+                <input type="password" name="password" defaultValue="123456" required />
                 {errMsg && <p className={styles.resMsg}>{errMsg.split("_").join(" ")}</p>}
                 <button type="submit">submit</button>
             </form>}

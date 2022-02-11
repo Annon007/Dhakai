@@ -26,7 +26,7 @@ const Card = props => {
             }
         };
         getData();
-    }, [flag, localStorage.getItem("dhakaiToken")])
+    }, [flag])
     console.log(data, "State Dtas");
     const manufacture = data?.manufacturers?.map((el, i) => {
         return <div key={el._id} className={styles.cardContainer}>

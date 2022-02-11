@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import dhakaiLogo from "../../images/dhakai.png";
 import Home from "../../images/icons/house.svg";
 import Search from "../../images/icons/search.svg";
@@ -12,8 +12,14 @@ import Terms from "../../images/icons/term.svg";
 import Logout from "../../images/icons/logout.svg";
 import styles from "./bodySideBar.module.css";
 
-const BodySideBar = props => {
+import LoginContext from "../../Store/user-Context";
 
+const BodySideBar = props => {
+    const userLog = useContext(LoginContext);
+    const handleLog = () => {
+        userLog.removeLog();
+        localStorage.removeItem("dhakaiToken")
+    }
     return <div className={styles.sideBarContainer}>
         <div className={styles.sideBarTop}>
             <img src={dhakaiLogo} className={styles.logo} alt="logo" />
@@ -29,7 +35,7 @@ const BodySideBar = props => {
         <div className={styles.sideBarBottom}>
             <img src={Settings} className={styles.logo} alt="logo" />
             <img src={Terms} className={styles.logo} alt="logo" />
-            <img src={Logout} className={styles.logo} alt="logo" />
+            <img src={Logout} onClick={handleLog} className={styles.logo} alt="logo" />
         </div>
     </div>
 }
